@@ -1,6 +1,9 @@
 import os
 import getpass
 import shutil
+import FileExtensions
+
+
 
 def extensions_checker(file_name: str, extensions: list) -> bool:
     """Checks to see if file_name ends with one of the file extensions from the given list"""
@@ -23,15 +26,6 @@ pictures_folder = f"/home/{user_name}/Pictures"
 music_folder = f"/home/{user_name}/Music"
 
 
-doc_file_extensions = [
-                        ".doc", ".docx", ".pdf", ".txt", ".rtf", ".odt", ".pages",
-                        ".md", ".xls", ".xlsx", ".csv", ".ods", ".numbers", ".ppt",
-                        ".pptx", ".odp", ".key", ".html", ".htm", ".xml", ".epub",
-                        ".tex", ".wps"
-                        ]
-picture_file_extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"]
-music_file_extensions = [".mp3", ".wav", ".flac", ".aac", ".m4a", ".ogg", ".opus"]
-
 
 # loop through the downloads folder
 
@@ -42,15 +36,15 @@ for file in os.listdir(path):
         path_to_file = f"/home/{user_name}/Downloads/{file}"
         shutil.move(path_to_file, doc_folder)
 
-    elif extensions_checker(file, doc_file_extensions):
+    elif extensions_checker(file, FileExtensions.doc_file_extensions):
         path_to_file = f"/home/{user_name}/Downloads/{file}"
         shutil.move(path_to_file, doc_folder)
 
-    elif extensions_checker(file, picture_file_extensions):
+    elif extensions_checker(file, FileExtensions.picture_file_extensions):
         path_to_file = f"/home/{user_name}/Downloads/{file}"
         shutil.move(path_to_file, pictures_folder)
 
-    elif extensions_checker(file, music_file_extensions):
+    elif extensions_checker(file, FileExtensions.music_file_extensions):
         path_to_file = f"/home/{user_name}/Downloads/{file}"
         shutil.move(path_to_file, music_folder) 
 
