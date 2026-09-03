@@ -13,15 +13,15 @@ def extensions_checker(file_name: str, extensions: list) -> bool:
     return False
 
 
-def validate_directory(directory_path: str, directory_name: str) -> None:
+def validate_directory(directory_path: str, directory_name: str) -> bool:
     """Checks to see if the directory path is valid"""
     # directory_name is used so that if the directory does not exist,
     # it tells the user which name has caused the error
     if os.path.isdir(directory_path):
-        pass # directory does exist, so exit from function
+        return True # directory does exist, so return True
     else:
         print(f"An error has occured, your {directory_name} folder should be here and have this name: {directory_path}")
-        raise SystemExit 
+        return False
 
 
 user_name = getpass.getuser() 
@@ -33,15 +33,20 @@ validate_directory(path, "Downloads")
 os.chdir(path) # change the current directory to the downloads folder
 
 # create the path for the target directories and validate them
+# stops the code if any directories are invalid
 
 doc_folder = f"/home/{user_name}/Documents"
 pictures_folder = f"/home/{user_name}/Pictures"
 music_folder = f"/home/{user_name}/Music"
 
-validate_directory(doc_folder, "Documents")
-validate_directory(pictures_folder, "Pictures")
-validate_directory(music_folder, "Music")
+if validate_directory(doc_folder, "Documents") == False:
+    raise SystemExit
 
+if validate_directory(pictures_folder, "Pictures") == False:
+    raise SystemExit
+
+if validate_directory(music_folder, "Music") == False:
+    raise SystemExit
 
 missing_extensions = [] # stores what files could not be moved
 
