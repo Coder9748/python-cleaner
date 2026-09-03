@@ -19,7 +19,7 @@ def validate_directory(directory_path: str, directory_name) -> None:
         pass
     else:
         print(f"An error has occured, your {directory_name} folder should be here and have this name: {directory_path}")
-        quit()
+        raise SystemExit 
 
 
 # change the current directory to the Downloads folder
