@@ -70,11 +70,10 @@ for file in os.listdir(path):
         missing_extensions.append(file) # file extension was not included in FileExtensions.py
 
 # display files whose extensions were not included in the code
+if len(missing_extensions >= 1): # checks if there were missing file extensions
+    for file in missing_extensions:
+       print(file)
 
-for file in missing_extensions:
-    print(file)
-
-print("\nSorry, the above file extensions were not recognised")
-print("Please submit an issue on the GitHub page, I may be able to add it.")
-print("Alternatively, you can add the extension yourself, and submit a pull request on Github\n")
-
+    print("\nSorry, the above file extensions were not recognised")
+    print("Please submit an issue on the GitHub page, I may be able to add it.")
+    print("Alternatively, you can add the extension yourself, and submit a pull request on Github\n")   
