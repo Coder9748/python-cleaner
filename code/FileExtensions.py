@@ -1,4 +1,4 @@
-"""Stores all file extensions used by Main.py"""
+"""Stores all file extensions used by Cleaner.py"""
 
 
 doc_file_extensions = [
