@@ -14,6 +14,9 @@ python Cleaner.py
 
 ## Supported operating systems
 * Linux
+* MacOS
+* Windows 10
+* Windows 11
 
 ## Supported Directories
 * Downloads
