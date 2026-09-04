@@ -94,7 +94,7 @@ def main():
             missing_extensions.append(file)
 
     # display files whose extensions were not included in the code
-    if len(missing_extensions >= 1):
+    if len(missing_extensions) >= 1:
         # checks if there were missing file extensions
         for file in missing_extensions:
             print(file)
@@ -103,4 +103,4 @@ def main():
         print("Please submit an issue on the GitHub page, "
               "I may be able to add it.")
         print("Alternatively, you can add the extension yourself, "
-              " and submit a pull request on Github\n")
+              "and submit a pull request on Github\n")
