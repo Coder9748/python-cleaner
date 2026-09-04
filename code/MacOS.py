@@ -1,4 +1,4 @@
-# uses Linux file paths
+# uses MacOS file paths
 
 import os
 import getpass
