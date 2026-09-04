@@ -1,11 +1,15 @@
-"""Stores all file extensions used by Cleaner.py"""
+# Stores all file extensions used by Cleaner.py"""
 
 
 doc_file_extensions = [
-                        ".doc", ".docx", ".pdf", ".txt", ".rtf", ".odt", ".pages",
-                        ".md", ".xls", ".xlsx", ".csv", ".ods", ".numbers", ".ppt",
-                        ".pptx", ".odp", ".key", ".html", ".htm", ".xml", ".epub",
+                        ".doc", ".docx", ".pdf", ".txt", ".rtf", ".odt",
+                        ".pages", ".md", ".xls", ".xlsx", ".csv", ".ods",
+                        ".numbers", ".ppt", ".pptx", ".odp", ".key",
+                        ".html", ".htm", ".xml", ".epub",
                         ".tex", ".wps"
                         ]
 picture_file_extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"]
-music_file_extensions = [".mp3", ".wav", ".flac", ".aac", ".m4a", ".ogg", ".opus"]
+music_file_extensions = [
+                        ".mp3", ".wav", ".flac", ".aac",
+                        ".m4a", ".ogg", ".opus"
+                        ]
