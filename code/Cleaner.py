@@ -1,4 +1,5 @@
-# calls the main functions for the different operating systems depending on the users operating system
+# calls the main functions for the different operating systems
+# depending on the users operating system
 
 import platform
 import Linux
@@ -18,5 +19,3 @@ elif user_OS == "Windows":
 
 else:
     print(f"Sorry, your operating system {user_OS} is not supported.")
-
-
